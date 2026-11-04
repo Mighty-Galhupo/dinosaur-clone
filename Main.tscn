@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dvlp0yney1e7v" path="res://Dino.tscn" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://8k1bwek7a58n" path="res://Scripts/main.gd" id="1_uu6xs"]
-[ext_resource type="PackedScene" uid="uid://cja6riy61ng03" path="res://CactusBig.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://defeos4xxduk" path="res://Big Cactus.tscn" id="2_fos0i"]
+[ext_resource type="Script" uid="uid://xqf3yybyob40" path="res://Scripts/spawner.gd" id="3_fos0i"]
 [ext_resource type="PackedScene" uid="uid://bs7o3it3h7vhs" path="res://Scoreboard.tscn" id="4_cm0pq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2w6x"]
@@ -17,8 +18,14 @@ position = Vector2(576, 550)
 position = Vector2(0, -1)
 shape = SubResource("WorldBoundaryShape2D_g2w6x")
 
-[node name="CactusBig" parent="." unique_id=1597028908 instance=ExtResource("2_uu6xs")]
-position = Vector2(1346, 500)
+[node name="Obstacles" type="Node2D" parent="." unique_id=1474982469]
+
+[node name="Big Cactus" parent="Obstacles" unique_id=1223998467 instance=ExtResource("2_fos0i")]
+position = Vector2(1350, 500)
+
+[node name="Spawner" type="Node2D" parent="." unique_id=72436191]
+position = Vector2(1350, 500)
+script = ExtResource("3_fos0i")
 
 [node name="Dinosaur" parent="." unique_id=1775919944 instance=ExtResource("1_glv2v")]
 position = Vector2(275, 500)
