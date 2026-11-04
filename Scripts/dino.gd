@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -300.0
 var jumping: bool
 
 func _physics_process(delta: float) -> void:
@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta 
 		if Input.is_action_pressed("Crouch"):
-			velocity += get_gravity() * delta * 2
+			velocity += get_gravity() * delta * 2.5
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():			
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		jumping = true
 	
 	if Input.is_action_pressed("Jump") and velocity.y < 0 and jumping:
-		velocity.y += 0.02 * JUMP_VELOCITY
+		velocity.y += 1.95 * JUMP_VELOCITY * delta
 	else:
 		jumping = false
 
