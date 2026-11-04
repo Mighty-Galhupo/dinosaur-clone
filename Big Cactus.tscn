@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://defeos4xxduk"]
+
+[ext_resource type="PackedScene" uid="uid://wqf6xdugjga5" path="res://Obstacle.tscn" id="1_yybcb"]
+[ext_resource type="Script" uid="uid://6lo4qjh35sny" path="res://Scripts/big_cactus.gd" id="2_ogsw2"]
+[ext_resource type="Texture2D" uid="uid://bld5se1mi0kjx" path="res://Assets/Browser Games - Google Dinosaur Run Game - Miscellaneous - Enemies, Obstacles, and Objects.png" id="3_g7qtu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_28d27"]
+radius = 20.0
+height = 90.0
+
+[node name="Big Cactus" unique_id=1223998467 instance=ExtResource("1_yybcb")]
+script = ExtResource("2_ogsw2")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1976807645]
+texture = ExtResource("3_g7qtu")
+region_enabled = true
+region_rect = Rect2(258.03876, 196.53236, 51.82895, 101.60527)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=506877564]
+shape = SubResource("CapsuleShape2D_28d27")

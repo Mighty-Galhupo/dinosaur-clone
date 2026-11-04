@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bs7o3it3h7vhs"]
+
+[ext_resource type="Script" uid="uid://c5mg51n2j6ims" path="res://score_num.gd" id="1_1oo4x"]
+
+[node name="Scoreboard" type="Control" unique_id=1398159667]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="." unique_id=994164690]
+layout_mode = 0
+offset_right = 114.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 30
+text = "Score: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreNum" type="Label" parent="." unique_id=1379483487]
+layout_mode = 0
+offset_left = 103.0
+offset_right = 143.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("1_1oo4x")
