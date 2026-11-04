@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cph0sxjdbyrw2"]
+
+[ext_resource type="PackedScene" uid="uid://dvlp0yney1e7v" path="res://Dino.tscn" id="1_glv2v"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2w6x"]
+
+[node name="Node2D" type="Node2D" unique_id=1160660606]
+
+[node name="Dinosaur" parent="." unique_id=1775919944 instance=ExtResource("1_glv2v")]
+position = Vector2(568, 315)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=113021973]
+position = Vector2(565, 533)
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1756104534]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_g2w6x")

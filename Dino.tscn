@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dvlp0yney1e7v"]
+
+[ext_resource type="Texture2D" uid="uid://bxco15xv6045r" path="res://Browser Games - Google Dinosaur Run Game - Playable Characters - Dinosaur.png" id="1_eduse"]
+[ext_resource type="Script" uid="uid://bmv5h6bmvquu2" path="res://dino.gd" id="1_sursh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2w6x"]
+size = Vector2(67, 90)
+
+[node name="Dinosaur" type="CharacterBody2D" unique_id=1406715038]
+script = ExtResource("1_sursh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=967447276]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_g2w6x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1664579746]
+texture = ExtResource("1_eduse")
+region_enabled = true
+region_rect = Rect2(1.5454521, 57.90909, 94.54544, 90.90909)
