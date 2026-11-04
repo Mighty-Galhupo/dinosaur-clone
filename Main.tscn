@@ -7,10 +7,10 @@
 [node name="Node2D" type="Node2D" unique_id=1160660606]
 
 [node name="Dinosaur" parent="." unique_id=1775919944 instance=ExtResource("1_glv2v")]
-position = Vector2(568, 315)
+position = Vector2(275, 500)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=113021973]
-position = Vector2(565, 533)
+position = Vector2(576, 550)
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1756104534]
