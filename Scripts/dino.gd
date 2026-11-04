@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -400.0
 var jumping: bool
 
 func _physics_process(delta: float) -> void:
@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		jumping = true
 	
 	if Input.is_action_pressed("Jump") and velocity.y < 0 and jumping:
-		velocity.y += 0.03 * JUMP_VELOCITY
+		velocity.y += 0.02 * JUMP_VELOCITY
 	else:
 		jumping = false
 
