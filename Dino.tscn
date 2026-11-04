@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bxco15xv6045r" path="res://Assets/Browser Games - Google Dinosaur Run Game - Playable Characters - Dinosaur.png" id="1_eduse"]
 [ext_resource type="Script" uid="uid://bmv5h6bmvquu2" path="res://Scripts/dino.gd" id="1_sursh"]
-[ext_resource type="Script" uid="uid://bmgy4a5tdqvpc" path="res://Scripts/hurtbox.gd" id="3_fdobs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sursh"]
 radius = 35.5
@@ -19,9 +18,8 @@ region_rect = Rect2(1.5454521, 57.90909, 94.54544, 90.90909)
 [node name="Floor Collision" type="CollisionShape2D" parent="." unique_id=967447276]
 shape = SubResource("CapsuleShape2D_sursh")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=598179836]
-script = ExtResource("3_fdobs")
+[node name="Hurtbox" type="Area2D" parent="." unique_id=598179836]
 
-[node name="Hurtbox" type="CollisionShape2D" parent="Area2D" unique_id=144155155]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=144155155]
 shape = SubResource("CapsuleShape2D_sursh")
 debug_color = Color(1, 0.22745098, 0.25882354, 0.41960785)
